@@ -1,0 +1,29 @@
+#http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+server:
+    port : 8082
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        health:
+            show-details: always
+
+spring:
+    application:
+        name : client Application
+    boot:
+        admin:
+            client:
+                url: http://localhost:8081 # 등록 할 Spring Boot Admin 서버의 URL.
+# Credentials to authenticate with the Admin Server
+                username : admin
+                password : 1234
+                
+
+logging:
+    level:
+        ROOT : info

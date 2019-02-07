@@ -1,0 +1,30 @@
+#http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+application:
+  version: 1.0
+  title: Spring Boot Admin Application
+
+server:
+    port : 8081
+
+logging:
+    level:
+        ROOT : info
+
+# To the admin server
+spring:
+    security.user.name : admin
+    security.user.password : 1234
+
+# SMTP Server for local notifications
+#    mail.host : localhost
+#    mail.username : smtp-server-user
+#    mail.password : smtp-server-password
+
+#    boot:
+#        admin:
+#            notify:
+#                mail:
+#                    from : "Spring Boot Admin <noreply@foo.com>"
+#                    to : alice@foo.com,bob@bar.com
+#                    cc : joe@foo.com

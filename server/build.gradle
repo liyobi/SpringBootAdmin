@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+war {
+    archiveName = 'boot-admin.war'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web" )
+    
+    //security
+    compile("org.springframework.boot:spring-boot-starter-security")
+    
+    //admin server
+    compile('de.codecentric:spring-boot-admin-starter-server:2.1.2')
+    
+    //email
+    compile('org.springframework.boot:spring-boot-starter-mail')
+    
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+
+}
