@@ -1,6 +1,6 @@
-# SpringBootAdmin
-Spring Boot Admin Application
+# Spring Boot Admin
 
+https://codecentric.github.io/spring-boot-admin/current/
 
 server port : 8081
 
